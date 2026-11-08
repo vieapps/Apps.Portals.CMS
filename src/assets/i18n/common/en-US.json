@@ -5,7 +5,8 @@
 			"login": "Login",
 			"register": "Register",
 			"profile": "Profile",
-			"search": "Search"
+			"search": "Search",
+			"metrics": "System metrics"
 		},
 		"alert": {
 			"header": {
@@ -24,7 +25,7 @@
 			"create": "Create new",
 			"update": "Update",
 			"delete": "Delete",
-			"edit": "Edit",
+			"edit": "Update",
 			"view": "View",
 			"save": "Save",
 			"cancel": "Cancel",
@@ -38,57 +39,63 @@
 			"move": "Move",
 			"continue": "Continue",
 			"later": "Later",
-			"login": "Log In",
-			"logout": "Log Out",
+			"login": "Log in",
+			"logout": "Log out",
 			"submit": "Submit"
 		},
 		"messages": {
 			"initializing": "Initializing session...",
-			"loading": "Loading...",
+			"loading": "Loading data...",
+			"searching": "Searching for data...",
 			"activating": "Activating...",
 			"processing": "Processing...",
+			"refreshen": "Data has been reloaded and refreshed...",
 			"errors": {
-				"general": "Unexpected error!",
+				"general": "An error has occurred!",
 				"wrongAccountOrPassword": "Wrong account or password!",
 				"wrongCaptcha": "Verification code is invalid"
 			},
 			"delete": {
-				"normal": "Sure to delete?",
+				"normal": "Are you sure you want to delete?",
 				"selected": "Are you sure you want to delete the selected information?"
 			},
 			"completer": {
 				"searching": "searching...",
-				"noresults": "no matched result is found"
+				"noresults": "No matching results found"
 			}
 		},
 		"audits": {
 			"identity": "Identity",
 			"label": "Management information",
-			"info": "Created by {{creator}} at {{created}} - {{modifier}} was modified at {{modified}}"
+			"info": "Created by {{creator}} at {{created}} - Last updated by {{modifier}} at {{modified}}"
 		},
 		"preferences": {
-			"label": "Preferences",			
+			"label": "System",
+			"notifications": "Notifications",
+			"profile": "Account information",
+			"logs": "View system logs",
+			"flushCache": "Clear all cache",
 			"options": {
 				"language": "Language",
-				"theme": "Use dark-theme",
-				"preflight": "Preflight",
-				"xhr": "Prefer XHR",
-				"xhrToken": "Prefer XHR Query Token",
-				"debug": "Turn on debug logs"
+				"thumbnails": "Use thumbnails when editing",
+				"theme": "Use dark theme",
+				"preflight": "Use preloading",
+				"xhr": "Use XHR",
+				"xhrToken": "Use XHR Query Token",
+				"debug": "Enable detailed logs"
 			},
-			"notifications": "Notifications",
 			"apps": {
-				"desktop:": "Desktop apps",
-				"mobile": "Mobile & Tablet apps"
+				"desktop": "Desktop apps",
+				"mobile": "Mobile apps"
 			},
-			"about": "Information"
+			"about": "About the app"
 		}
 	},
 	"privileges": {
 		"roles": {
 			"systems": {
-				"All": "All (include anonymous)",
-				"Authorized": "Authorized users",
+				"All": "All users",
+				"Authorized": "Signed-in users",
 				"SystemAdministrator": "System Administrator"
 			},
 			"privileges": {
@@ -97,63 +104,63 @@
 				"Editor": "Editor",
 				"Contributor": "Contributor",
 				"Viewer": "Viewer (Read Only)",
-				"Downloader": "Downloader"
+				"Downloader": "Download files only"
 			}
 		},
 		"services": {
-			"role": "Acting role in the '{{service}}'",
+			"role": "General role in '{{service}}'",
 			"other": "Other roles",
-			"object": "Acting role of '{{object}}'"
+			"object": "Role for '{{object}}'"
 		},
 		"objects": {
-			"inheritFromParent": "Inherit from parent",
+			"inheritFromParent": "Inherit access permissions from parent",
 			"Administrative": {
 				"label": "Manage",
 				"description": "",
-				"roles": "Roles can manage",
-				"users": "Users can manage"
+				"roles": "Administrative roles",
+				"users": "Administrative users"
 			},
 			"Moderate": {
 				"label": "Moderate",
 				"description": "",
-				"roles": "Roles can moderate",
-				"users": "Users can moderate"
+				"roles": "Moderator roles",
+				"users": "Moderator users"
 			},
 			"Editable": {
 				"label": "Edit",
 				"description": "",
-				"roles": "Roles can edit",
-				"users": "Users can edit"
+				"roles": "Editor roles",
+				"users": "Editor users"
 			},
 			"Contributive": {
 				"label": "Contribute",
 				"description": "",
-				"roles": "Roles can contribute (create new)",
-				"users": "Users can contribute (create new)"
+				"roles": "Contributor roles",
+				"users": "Contributor users"
 			},
 			"Viewable": {
 				"label": "View (Read-Only)",
 				"description": "",
-				"roles": "Roles can view (read-only)",
-				"users": "Users can view (read-only)"
+				"roles": "Reader/viewer roles",
+				"users": "Reader/viewer users"
 			},
 			"Downloadable": {
-				"label": "Only download files",
+				"label": "Download files",
 				"description": "",
-				"roles": "Roles can only download files (cannot view)",
-				"users": "Users can only download files (cannot view)"
+				"roles": "Roles that can only download files",
+				"users": "Users that can only download files"
 			}
 		}
 	},
 	"status": {
 		"approval": {
-			"label": "Approval status",
+			"label": "Status",
 			"Draft": "Draft",
-			"Pending": "Pending",
+			"Pending": "Pending approval",
 			"Rejected": "Rejected",
 			"Approved": "Approved",
 			"Published": "Published",
-			"Archieved": "Archieved"
+			"Archieved": "Archived"
 		}
 	},
 	"events": {
@@ -161,37 +168,47 @@
 		"Create": "Create",
 		"Update": "Update",
 		"Delete": "Delete",
-		"Approve": "Approve"
+		"Approve": "Approve",
+		"Reject": "Reject"
 	},
 	"files": {
 		"thumbnails": {
 			"label": "Thumbnail image",
-			"current": "Current",
-			"new": "Newly selected"
+			"current": "Current image",
+			"new": "New image"
 		},
 		"attachments": {
 			"segment": "Attachments",
 			"label": "Attached files",
-			"confirm": "Are you sure you want to delete '{{name}}' file?",
+			"confirm": "Are you sure you want to delete the file '{{name}}'?",
 			"upload": "Upload",
 			"download": "Download",
 			"controls": {
 				"title": "Title",
 				"description": "Description",
-				"shared": "Shared to use in the whole system",
-				"tracked": "Track all activities",
-				"filename": "Filename"
+				"shared": "Share for use throughout the system",
+				"tracked": "Log all access (including views)",
+				"filename": "Filename",
+				"uri": "File viewing/download link"
 			}
 		}
 	},
 	"versions": {
 		"view": "View changed versions",
 		"list": "{{total}} changed version(s) [{{title}}]",
-		"confirm": "Are you sure you want to rollback from this #{{version}} version?",
-		"processing": "Rolling back..."
+		"confirm": "Are you sure you want to restore from version #{{version}}?",
+		"processing": "Restoring version...",
+		"done": "Restored from version #{{version}}..."
+	},
+	"trash": {
+		"list": "Trash",
+		"all": "All organizations",
+		"confirm": "Are you sure you want to restore [{{title}}] from trash?",
+		"processing": "Restoring data...",
+		"done": "Restored [{{title}}] from trash..."
 	},
 	"notifications": {
-		"title": "Notifications",
-		"label": "{{user}} do {{action}} with '{{title}}' - Status: {{status}}"
+		"title": "Activity notifications",
+		"label": "{{user}} performed {{action}} on '{{title}}' - Status: {{status}}"
 	}
 }

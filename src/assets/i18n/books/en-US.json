@@ -2,22 +2,22 @@
 	"books": {
 		"name": "Online Books",
 		"home": {
-			"latest": "Latest",
+			"latest": "Recently updated",
 			"statistics": {
 				"label": "Statistics:",
-				"authors": "Number of authors",
-				"books": "Number of articles & books",
+				"authors": "Total number of authors",
+				"books": "Total number of articles & books",
 				"categories": "Categories"
 			}
 		},
 		"objects": {
-			"book": "Books",
+			"book": "E-books",
 			"category": "Categories",
 			"statistic": "Statistics"
 		},
 		"bookmarks": {
-			"header": "Readings",
-			"footer": "Sync time:",
+			"header": "Currently reading",
+			"footer": "Synced at:",
 			"chapter": "Chapter: ",
 			"position": "Position: ",
 			"buttons": {
@@ -28,10 +28,10 @@
 		"crawl": {
 			"header": "Crawl data",
 			"label": "Crawl data from a specific source",
-			"placeholder": "Source url for crawling",
+			"placeholder": "Data source URL",
 			"mode": {
-				"full": "All chapters",
-				"missing": "Only missing"
+				"full": "All",
+				"missing": "Missing chapters"
 			},
 			"button": "Crawl",
 			"message": "Crawl request has been sent..."
@@ -43,13 +43,13 @@
 				"author": "Author: {{author}}"
 			},
 			"searchbar": {
-				"search": "Place search term by quotes (\"..\") as required",
-				"filter": "Quick filter"
+				"search": "Place keywords in \"..\" for an exact search (diacritics are optional), for example: \"Little Nicholas\"",
+				"filter": "Quick search; diacritics are optional"
 			},
 			"actions": {
 				"search": "Open search screen",
-				"filter": "Quick filter",
-				"sort": "Change sort-by",
+				"filter": "Quick filter/search",
+				"sort": "Change sorting",
 				"show": "Show all {{totalRecords}} results",
 				"crawl": "Crawl data"
 			},
@@ -57,11 +57,11 @@
 				"labels": {
 					"Title": "Title (A - Z)",
 					"LastUpdated": "Last updated",
-					"Chapters": "More chapters first"
+					"Chapters": "More chapters/sections first"
 				},
 				"header": "Sort by",
-				"button": "Update",
-				"message": "Sort-by has been changed..."		
+				"button": "Set",
+				"message": "Sorting has been changed..."
 			}
 		},
 		"read": {
@@ -97,32 +97,32 @@
 				"Tags": "Tags",
 				"TOCs": "Table of Contents"
 			},
-			"chapters": "Number of chapters",
+			"chapters": "Number of chapters/sections",
 			"download": "Download",
 			"qrcode": {
 				"header": "QR Code",
-				"description": "Use {{scanner}} to scan QR Code to quick access"
+				"description": "Use {{scanner}} to scan the QR Code for quick access"
 			},
 			"statistics": {
-				"views": "Views",
+				"views": "Reads",
 				"downloads": "Downloads",
 				"total": "Total",
-				"month": "Total of this month",
-				"week": "Total of this week"
+				"month": "This month",
+				"week": "This week"
 			},
 			"updated": "Updated at",
 			"link": "Link",
-			"notAuthenticated": "Please login to download e-book files!"
+			"notAuthenticated": "Please log in to download e-books!"
 		},
 		"options": {
 			"title": "Reading Options",
 			"labels": {
-				"color": "Color",
+				"color": "Background color",
 				"font": "Font",
 				"size": "Font size",
-				"paragraph": "Paragraphs",
-				"align": "Alighments",
-				"sample": "<p>The quick brown fox jumps over the lazy dog; The quick brown fox jumps over the lazy dog; The quick brown fox jumps over the lazy dog;</p><p>The quick brown fox jumps over the lazy dog; The quick brown fox jumps over the lazy dog; The quick brown fox jumps over the lazy dog;</p>"
+				"paragraph": "Line spacing",
+				"align": "Alignment",
+				"sample": "<p>I kept accelerating, day and night merging into one; the sky turned a deep blue, glowing like an early sunset;</p><p>The sun was a shimmering streak of blazing fire; the moon became a wavering band of dim light, and I could see no stars.</p>"
 			},
 			"color": {
 				"white": "White",
@@ -131,10 +131,10 @@
 			},
 			"font": {
 				"default": "Default",
-				"like-default": "Like default",
-				"plump": "Plump",
+				"like-default": "Similar to default",
+				"plump": "Rounded",
 				"fat": "Fat",
-				"fancy": "Fancy"
+				"fancy": "Unusual"
 			},
 			"size": {
 				"smallest": "Smallest",
@@ -147,8 +147,8 @@
 			},
 			"paragraph": {
 				"one": "Normal",
-				"two": "Light",
-				"three": "Lighter"
+				"two": "Loose",
+				"three": "Very loose"
 			},
 			"align": {
 				"align-left": "Left",
@@ -158,19 +158,19 @@
 		},
 		"update": {
 			"title": {
-				"update": "Update book",
-				"request": "Request to update book"
+				"update": "Update book information",
+				"request": "Request a book information update"
 			},
 			"button": "Send request",
 			"segments": {
-				"meta": "Book Info",
-				"others": "TOCs & Cover Image"
+				"meta": "Book information",
+				"others": "Table of contents & cover image"
 			},
 			"messages": {
 				"confirm": "Are you sure you want to discard changes?",
 				"success": "The book has been updated...",
-				"sent": "Update request has been sent...",
-				"sync": "Readings sync successful..."
+				"sent": "The book update request has been sent to the administrator...",
+				"sync": "Currently reading books have been synced..."
 			}
 		}
 	}
