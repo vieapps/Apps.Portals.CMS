@@ -2284,7 +2284,7 @@ export class PortalsCmsService extends BaseService {
 				if (object === undefined && force) {
 					await this.portalsCoreSvc.getSchedulingTaskAsync(id, () => object = SchedulingTask.get(id), undefined, true);
 				}
-				object = object || new SchedulingTask({ SystemIDSystemID: this.portalsCoreSvc.activeOrganization.ID });
+				object = object || new SchedulingTask({ SystemID: this.portalsCoreSvc.activeOrganization.ID });
 				gotRights = gotRights || this.portalsCoreSvc.canModerateOrganization((object as SchedulingTask).organization, account);
 				break;
 			case "Category":

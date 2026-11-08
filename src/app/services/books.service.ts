@@ -370,7 +370,7 @@ export class BooksService extends BaseService {
 	}
 
 	deleteBookAsync(id: string, onSuccess?: (data?: any) => void, onError?: (error?: any) => void) {
-		return this.deleteBookAsync(
+		return this.deleteAsync(
 			this.getPath("book", id),
 			data => {
 				Book.instances.remove(id);

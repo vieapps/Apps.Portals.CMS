@@ -430,7 +430,6 @@ export class CmsLinksListPage implements OnInit, OnDestroy {
 	}
 
 	create() {
-		console.warn("filter-by", this.filterBy);
 		this.do(() => this.configSvc.navigateForwardAsync(this.portalsCoreSvc.getAppURL(this.contentType, "create", undefined, Link.getParams(this.filterBy))));
 	}
 

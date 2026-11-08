@@ -692,9 +692,9 @@ export class PortalsExpressionsUpdatePage implements OnInit {
 				expression.RepositoryEntityID = AppUtility.isNotEmpty(expression.RepositoryEntityID) && expression.RepositoryEntityID !== "-" ? expression.RepositoryEntityID : undefined;
 
 				if (this.isAdvancedMode) {
-					delete expression["JSONXRequest"];
-					delete expression["EncodedXRequest"];
-					delete expression["Encode"];
+					delete expression["XRequestJSON"];
+					delete expression["XRequestEncoded"];
+					delete expression["Stringify"];
 				}
 
 				try {

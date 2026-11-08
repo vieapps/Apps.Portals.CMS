@@ -9,7 +9,7 @@ export abstract class PortalBase extends BaseModel {
 	}
 
 	/** Get the collection of all approval statuses */
-	static approvalStatus = ["Draft", "Pending", "Rejected", "Approved", "Published", "Archieved"];
+	static approvalStatus = ["Draft", "Pending", "Rejected", "Approved", "Published", "Archived"];
 
 	/** Get the collection of all module definitions */
 	static moduleDefinitions: ModuleDefinition[];

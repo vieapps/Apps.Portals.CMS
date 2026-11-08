@@ -3033,7 +3033,7 @@ export class PortalsCoreService extends BaseService {
 				break;
 		}
 		if (!!message.Data.Title && (message.Type.Event === "Create" || message.Type.Event === "Update" || message.Type.Event === "Delete")) {
-			AppEvents.broadcast(this.name, { Object: "Content.Type", Type: `${message.Type.Event}d`, ID: message.Data.ID, SystemID: message.Data.SystemID });
+			AppEvents.broadcast(this.name, { Object: "Expression", Type: `${message.Type.Event}d`, ID: message.Data.ID, SystemID: message.Data.SystemID });
 		}
 	}
 

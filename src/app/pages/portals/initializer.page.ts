@@ -55,7 +55,7 @@ export class PortalInitializerPage implements OnInit, OnDestroy {
 				const objectID = this.configSvc.requestParams["ObjectID"] as string;
 				const contentTypeID = this.configSvc.requestParams["RepositoryEntityID"] as string;
 				let contentType = ContentType.get(contentTypeID);
-				if (contentType === undefined && contentTypeID !== undefined && contentTypeID.length == 32) {
+				if (contentType === undefined && contentTypeID !== undefined && contentTypeID.length === 32) {
 					await this.portalsCoreSvc.getContentTypeAsync(contentTypeID, async _ => {
 						contentType = ContentType.get(contentTypeID);
 						if (contentType !== undefined && contentType.SystemID !== organization.ID) {

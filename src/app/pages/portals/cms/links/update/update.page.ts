@@ -466,7 +466,7 @@ export class CmsLinksUpdatePage implements OnInit, OnDestroy {
 							if (this.hash.content === hash.content) {
 								if (thumbnailBase64 !== undefined) {
 									await Promise.all([
-										this.portalsCmsSvc.refreshItemAsync(link.ID),
+										this.portalsCmsSvc.refreshLinkAsync(link.ID),
 										this.trackAsync(this.title.track, "Upload", "Thumbnail"),
 										this.appFormsSvc.showToastAsync(await this.configSvc.getResourceAsync("portals.cms.contents.update.messages.success.update")),
 									]);
